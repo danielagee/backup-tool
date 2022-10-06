@@ -1,7 +1,9 @@
-#Day 14 Task 3
+#Day 16 of #100daysofcoding #python
+
 import glob
 
-dir_path = r'c:\python\MyFolder\**\*.*'
+dir_path = r'..\**\*.*'
+root_dir = r'c:\Python\MyFolder\**'
 
-for files in glob.glob(dir_path, recursive=True):
+for files in glob.glob(dir_path, root_dir=root_dir, recursive=True):
     print(files)
