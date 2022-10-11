@@ -15,8 +15,8 @@ root_dir_active += '**'
 root_dir_backup = input('What is the path of your backup?\n')
 root_dir_backup += '**'
 
+# Extracts the active and backup file lists from the user specified folders.
 file_list_active = glob.glob(dir_path, root_dir=root_dir_active, recursive=True)
-
 file_list_backup = glob.glob(dir_path, root_dir=root_dir_backup, recursive=True)
 
 """
@@ -36,9 +36,9 @@ for files_backup in glob.glob(dir_path, root_dir=root_dir_backup, recursive=True
 
 # Creates sets from the file lists so they can be sorted and compared.
 set_active = set(file_list_active)
-sorted_list_active = sorted(set_active)
+#sorted_list_active = sorted(set_active)
 set_backup = set(file_list_backup)
-sorted_list_backup = sorted(set_backup)
+#sorted_list_backup = sorted(set_backup)
 
 # Subtracts the backup set from the active set to show what's in active and not in backup.
 set_missing = set_active - set_backup
